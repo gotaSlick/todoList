@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
 
-  <body>
+<body>
+  <div class="container">
     <h1>Todo List</h1>
-    
-    <div>
+
+    <div class="todoForm">
       <!-- onclick attribute with its function from script.js -->
-      <button onclick="handlers.toggleAll()">Toggle All</button>
+      <!-- <button onclick="handlers.toggleAll()">Toggle All</button> -->
+      <button type="button" class="btn btn-outline-success" onclick="handlers.toggleAll()">Toggle All</button>
       <!-- first goes the name of the object then . and then the name of the method.-->
     </div>
-    
-    <div>
-      <button onclick="handlers.addTodo()">Add</button>
-      <input id="addTodoTextInput" type="text">
+
+
+    <!-- Old v <button onclick="handlers.addTodo()">Add</button> -->
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type="button" class="btn btn-outline-secondary" onclick="handlers.addTodo()">Add</button>
+      </div>
+      <input id="addTodoTextInput" type="text" class="form-control" placeholder="Add a todo">
     </div>
-    
-    <div>
-      <button onclick="handlers.changeTodo()">Change Todo</button>
-      <input id="changeTodoPositionInput" type="number">
-      <input id="changeTodoTextInput" type="text">
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type="button" class="btn btn-outline-secondary" onclick="handlers.changeTodo()">Change Todo</button>
+      </div>
+      <input id="changeTodoPositionInput" type="number" placeholder="Choose which">
+      <input id="changeTodoTextInput" type="text" class="form-control" placeholder="Todo to change">
     </div>
-    
-    <div>
-      <button onclick="handlers.deleteTodo()">Delete Todo</button>
-      <input id="deleteTodoPositionInput" type="number">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type="button" class="btn btn-outline-secondary" onclick="handlers.deleteTodo()">Delete Todo</button>
+      </div>
+      <input id="deleteTodoPositionInput" type="number" placeholder="Choose todo to delete">
     </div>
-    
-    <div>
-      <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
-      <input id="toggleCompletedPositionInput" type="number">
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button type="button" class="btn btn-outline-secondary" onclick="handlers.toggleCompleted()">Toggle Completed</button>
+      </div>
+      <input id="toggleCompletedPositionInput" type="number" placeholder="Which one?">
     </div>
-    
+
     <ul>
-      
+
     </ul>
-    
-    <script src="todoList.js"></script>
-  </body>
+
+  </div>
+  <script src="todoList.js"></script>
+</body>
 
 </html>

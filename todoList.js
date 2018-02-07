@@ -91,7 +91,7 @@ var view = {
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete'; 
-    deleteButton.className = 'deleteButton'; 
+    deleteButton.className = 'btn btn-outline-secondary'; 
     return deleteButton;
   },
   setUpEventListeners: function() {
